@@ -396,6 +396,10 @@ h1{
     padding-top: 15px;
  }
 
+ .order-confirmed-total p{
+    text-transform: capitalize;
+ }
+
 .order-confirmed-modal.hidden button {
   transition: none !important;
 }
