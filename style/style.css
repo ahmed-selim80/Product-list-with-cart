@@ -307,8 +307,20 @@ h1{
 
 /* modal start */
 
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* semi-transparent */
+    z-index: 1000; /* sits above page content */
+}
+
 .order-confirmed-modal{
     position: fixed;
+    z-index: 1010;
     left: 50%;
     top: 50%;
     transform: translate(-50% , -50%);
@@ -383,6 +395,10 @@ h1{
  .order-confirmed-total{
     padding-top: 15px;
  }
+
+.order-confirmed-modal.hidden button {
+  transition: none !important;
+}
 
 
 /* modal end */
