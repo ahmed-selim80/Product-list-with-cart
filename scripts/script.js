@@ -9,7 +9,6 @@ const confirmOrderBtn = document.querySelector(".cart-total button")
 const modal = document.querySelector(".order-confirmed-modal");
 const overlay = document.querySelector(".overlay");
 const orderConfirmedProductsArea = document.querySelector('.order-confirmed-products');
-const modalTotalPrice = document.querySelector(".order-confirmed-total p:nth-child(2)")
 const newOrderBtn = document.querySelector(".new-order-btn");
 
 // Getting the products from the json file
@@ -25,12 +24,11 @@ const GetProducts = async function(url){
 }
 
 // products is the array of all products
-const products = await GetProducts("../data.json");
+const products = await GetProducts("./data.json");
 const productsInCart = [];
 
 // rendering the products
 const renderProducts = function(products){
-    console.log(products);
     products.forEach(product => {
         const html = `
         <div class="product" data-name="${product.name}">
@@ -174,7 +172,12 @@ const updateCartProductsCounter = function(){
 const renderProductsInModal = function(products){
 
     // Clear old modal content
-    orderConfirmedProductsArea.innerHTML = "";
+    orderConfirmedProductsArea.innerHTML = `
+        <div class="order-confirmed-total">
+          <p>order total</p>
+          <p></p>
+        </div>
+    `
 
     products.forEach(product =>{
         const html = `
@@ -201,6 +204,8 @@ const renderProductsInModal = function(products){
     })
 
     // showing total price
+    
+    const modalTotalPrice = document.querySelector(".order-confirmed-total p:nth-child(2)")
     modalTotalPrice.textContent = cartTotalPrice.textContent;
 }
 
