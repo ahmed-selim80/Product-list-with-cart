@@ -81,6 +81,20 @@ button {
   cursor: pointer;
 }
 
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pressable{
+  z-index: 10;
+}
+
+.removed{
+  display: none;
+}
+
 /* 10. Accessibility: focus states */
 /* :focus {
   outline: 2px solid var(--color-primary);
