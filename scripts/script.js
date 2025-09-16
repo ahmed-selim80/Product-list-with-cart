@@ -61,7 +61,7 @@ const renderProducts = function(products){
             <div class="product-info">
                 <p>${product.category}</p>
                 <p>${product.name}</p>
-                <p>${product.price}</p>
+                <p>$${product.price}</p>
             </div><!-- product-info -->
         </div><!-- product -->
         `
