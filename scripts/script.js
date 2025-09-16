@@ -26,7 +26,7 @@ const GetProducts = async function(url){
 // products is the array of all products
 // const jsonURL = URL.createObjectURL("../data.json")
 // console.log(jsonURL)
-const products = await GetProducts("Product-list-with-cart/data.json");
+const products = await GetProducts("https://ahmed-selim80.github.io/Product-list-with-cart/data.json");
 const productsInCart = [];
 
 // rendering the products
