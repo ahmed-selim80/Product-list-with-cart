@@ -24,7 +24,7 @@ const GetProducts = async function(url){
 }
 
 // products is the array of all products
-const products = await GetProducts("Product-list-with-cart/data.json");
+const products = await GetProducts("../data.json");
 const productsInCart = [];
 
 // rendering the products
