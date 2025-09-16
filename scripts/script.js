@@ -47,11 +47,11 @@ const renderProducts = function(products){
                     
                     <div class="product-quantity hidden">
                     <div class="minus center">
-                        <i class="fas fa-minus"></i>
+                        <i class="fa-solid fa-minus"></i>
                     </div>
                     <span data-quantity="1">1</span>
                     <div class="plus center">
-                        <i class="fas fa-plus"></i>
+                        <i class="fa-solid fa-plus"></i>
                     </div>
                     </div><!-- product-quantity -->
 
