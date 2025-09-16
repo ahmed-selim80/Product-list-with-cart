@@ -35,7 +35,10 @@ const renderProducts = function(products){
         const html = `
         <div class="product" data-name="${product.name}">
             <div class="product-img">
-                <img src="${product.image.desktop}" alt="">
+                <picture>
+                    <source srcset="${product.image.mobile}" media="(max-width: 709px)">
+                    <img src="${product.image.desktop}" alt="${product.name}">
+                </picture>
             </div><!-- product-img -->
             
             <div class="product-quantity-btn">
